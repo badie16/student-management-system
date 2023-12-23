@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="980.0" styleClass="centerSlide" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.badie.sms.controls.ManageStudents">
+    <children>
+      <AnchorPane styleClass="centerSlide" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="982.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                      <Label alignment="CENTER" contentDisplay="CENTER" text="Manage Students">
+                          <font>
+                              <Font name="Gadugi" size="18.0" />
+                          </font>
+                      </Label>
+                  </children>
+              </StackPane>
+              <TableView fx:id="tableStudent" layoutX="31.200000762939453" layoutY="71.19999694824219" onMouseClicked="#handleMouseAction" prefHeight="400.0" prefWidth="918.0" style="-fx-background-color: #fff;" stylesheets="@main.css" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="70.0">
+                  <columns>
+                      <TableColumn fx:id="colCNE" prefWidth="107.20001220703125" text="CNE" />
+                      <TableColumn fx:id="colLastName" prefWidth="102.0" text="Last name" />
+                      <TableColumn fx:id="colFirstName" prefWidth="89.199951171875" text="First name" />
+                      <TableColumn fx:id="colGender" prefWidth="50.0" text="Gender" />
+                      <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="132.4000244140625" text="Email" />
+                      <TableColumn fx:id="colClass" minWidth="0.0" prefWidth="79.20000000000005" text="Class" />
+                  </columns>
+                  <columnResizePolicy>
+                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                  </columnResizePolicy>
+              </TableView>
+            <HBox layoutX="814.4000244140625" layoutY="485.20001220703125" spacing="15.0" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Pane prefHeight="40.0" prefWidth="60.0" style="-fx-background-radius: 4px;" styleClass="delete-btn" stylesheets="@main.css">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="TRASH_ALT" layoutX="21.0" layoutY="27.0" size="22" />
+                        <Button fx:id="delete" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #0000;" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="40.0" prefWidth="60.0" style="-fx-background-radius: 4px;" styleClass="update-btn" stylesheets="@main.css">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="EYE" layoutX="19.0" layoutY="27.0" size="22" />
+                        <Button fx:id="view" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewStudent" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: #0000;" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="viewPage" layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="980.0" styleClass="centerSlide" stylesheets="@main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="982.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Update Student">
+                     <font>
+                        <Font name="Gadugi" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <GridPane layoutX="30.399999618530273" layoutY="80.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="380.0" prefWidth="920.0" stylesheets="@main.css" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Last name" />
+                              <TextField fx:id="inLastName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" styleClass="input-V2" />
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="First name" />
+                              <TextField fx:id="inFirstName" maxWidth="1.7976931348623157E308" prefHeight="40.0" styleClass="input-V2" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="1">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Age" />
+                              <DatePicker fx:id="inAge" maxWidth="1.7976931348623157E308" prefHeight="40.0" stylesheets="@main.css">
+                                 <effect>
+                                    <InnerShadow height="25.73" radius="22.892500000000002" width="67.84">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></DatePicker>
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Gender" />
+                              <ChoiceBox fx:id="inGender" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" styleClass="input-V2" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="2">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Email" />
+                              <TextField fx:id="inMail" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Contact Number" />
+                              <TextField fx:id="inPhone" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="3">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Password" />
+                              <TextField fx:id="inPass" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="CNE" />
+                              <TextField fx:id="inCNE" disable="true" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="4">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Class" />
+                              <ChoiceBox fx:id="inClass" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" prefWidth="254.0" styleClass="input-V2" />
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <HBox layoutX="30.399999618530273" layoutY="479.6000061035156" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Button fx:id="update" mnemonicParsing="false" onAction="#updateStudent" prefHeight="40.0" prefWidth="109.0" styleClass="update-btn" stylesheets="@main.css" text="Update">
+                     <font>
+                        <Font name="Bell MT" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

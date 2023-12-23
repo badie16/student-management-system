@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="980.0" styleClass="centerSlide" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.badie.sms.controls.AddStudent">
+   <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="982.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <Label alignment="CENTER" contentDisplay="CENTER" text="Add Student">
+            <font>
+               <Font name="Gadugi" size="18.0" />
+            </font>
+         </Label>
+      </children>
+   </StackPane>
+   <GridPane layoutX="30.399999618530273" layoutY="80.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="380.0" prefWidth="920.0" stylesheets="@main.css" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+         <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0">
+            <children>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="Last name" />
+                     <TextField fx:id="inLastName" maxWidth="1.7976931348623157E308" prefHeight="40.0" styleClass="input-V2" />
+                  </children>
+               </VBox>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="First name" />
+                     <TextField fx:id="inFirstName" maxWidth="1.7976931348623157E308" prefHeight="40.0" styleClass="input-V2" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="1">
+            <children>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="Age" />
+                     <DatePicker fx:id="inAge" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="234.0" />
+                  </children>
+               </VBox>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="Gender" />
+                       <ChoiceBox fx:id="inGender" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="254.0" styleClass="input-V2" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="2">
+            <children>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="Email" />
+                       <TextField fx:id="inMail" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                           <font>
+                               <Font size="15.0" />
+                           </font>
+                       </TextField>
+                  </children>
+               </VBox>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="Contact Number" />
+                       <TextField fx:id="inPhone" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                           <font>
+                               <Font size="15.0" />
+                           </font>
+                       </TextField>
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="3">
+            <children>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="Password" />
+                       <TextField fx:id="inPass" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                           <font>
+                               <Font size="15.0" />
+                           </font>
+                       </TextField>
+                  </children>
+               </VBox>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="CNE" />
+                       <TextField fx:id="inCNE" onKeyTyped="#onInputChanged" prefHeight="40.0" prefWidth="160.0" styleClass="input-V2">
+                           <font>
+                               <Font size="15.0" />
+                           </font>
+                       </TextField>
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" GridPane.rowIndex="4">
+            <children>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                  <children>
+                     <Label text="Class" />
+                     <ChoiceBox fx:id="inClass" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="254.0" styleClass="input-V2" />
+                  </children>
+               </VBox>
+               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="77.0" prefWidth="450.0" spacing="10.0" HBox.hgrow="ALWAYS" />
+            </children>
+         </HBox>
+      </children>
+   </GridPane>
+   <HBox layoutX="30.399999618530273" layoutY="479.6000061035156" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+      <children>
+         <Button fx:id="add" mnemonicParsing="false" onAction="#addStudent" prefHeight="40.0" prefWidth="100.0" styleClass="add-btn" stylesheets="@main.css" text="add">
+            <font>
+               <Font name="Bell MT" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="clear" mnemonicParsing="false" onAction="#clearInfo" prefHeight="40.0" prefWidth="100.0" styleClass="clear-btn" stylesheets="@main.css" text="clear">
+            <font>
+               <Font name="Bell MT" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+</AnchorPane>
