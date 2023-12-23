@@ -23,7 +23,7 @@ public interface Directories {
     String ClassPage = "fxml/ClassRegister.fxml";
     String CoursePage = "fxml/CourseRegister.fxml";
     String IconLogin = "img/login.png";
-    String IconHome = "img/icons/home.png";
+    String IconHome = "img/icons/home.png " ;
     String IconStudent = "img/icons8_user_64px.png";
     int NbrOfCourseInOnClass = 6;
     static URL url(String str){
